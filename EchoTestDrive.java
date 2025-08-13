@@ -8,10 +8,10 @@ public class EchoTestDrive {
       e1.hello();
       e1.count = e1.count + 1;
 
-      if (x > 0) {
+      if (x == 3) {
         e2.count = e2.count + 1;
       }
-      if (x == 4) {
+      if (x > 0) {
         e2.count = e2.count + e1.count;
       }
       x = x + 1;
