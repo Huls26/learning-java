@@ -1,3 +1,5 @@
+package Activity;
+
 public class GuessingGame {
   Boolean isGameOver = false;
   int numberGuess;

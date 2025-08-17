@@ -1,3 +1,5 @@
+package Activity;
+
 public class DrumKit {
   boolean topHat = true;
   boolean snare = true;
