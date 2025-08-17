@@ -1,3 +1,5 @@
+package Activity;
+
 public class Movie {
   String title;
   String genre;
