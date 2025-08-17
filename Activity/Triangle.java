@@ -1,3 +1,5 @@
+package Activity;
+
 public class Triangle {
   double area;
   int height;
