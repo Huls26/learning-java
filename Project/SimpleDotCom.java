@@ -24,6 +24,7 @@ public class SimpleDotCom {
           return "hit";
         }
       }
+      x = x + 1;
     }
 
     return "miss";
@@ -54,8 +55,10 @@ class SimpleDotComTestDrive {
 
     while (testRun.getNumOfHits() < 3) {
       String userGuess = System.console().readLine("Enter a number ");
-      System.out.println(testRun.checkYourSelf(userGuess));
-      if (testRun.checkYourSelf(userGuess) == "kill") {
+      String returnValue = testRun.checkYourSelf(userGuess);
+      System.out.println(returnValue);
+      numberOfGuess = numberOfGuess + 1;
+      if (returnValue == "kill") {
         System.out.println("You took " + numberOfGuess + " guess");
       }
     }
