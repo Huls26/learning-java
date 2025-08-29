@@ -1,19 +1,32 @@
 package Project;
 
-import java.util.Arrays;
-
 public class SimpleDotCom {
   private int[] locationCells;
   private int numOfHits = 0;
 
-  int[] getLocationCells() {
-    return locationCells;
+  int getNumOfHits() {
+    return numOfHits;
   }
 
   String checkYourSelf(String userGuess) {
     int integerGuess = Integer.parseInt(userGuess);
+    int x = 0;
 
-    return "hit";
+    while (x < 3) {
+      int currentValue = locationCells[x];
+
+      if (currentValue == integerGuess) {
+        numOfHits = numOfHits + 1;
+
+        if (numOfHits == 3) {
+          return "kill";
+        } else {
+          return "hit";
+        }
+      }
+    }
+
+    return "miss";
   }
 
   // Pick randomNum between 0 and 4
@@ -34,9 +47,17 @@ public class SimpleDotCom {
 
 class SimpleDotComTestDrive {
   public static void main(String[] args) {
-    SimpleDotCom test = new SimpleDotCom();
+    SimpleDotCom testRun = new SimpleDotCom();
+    int numberOfGuess = 0;
 
-    test.setLocationCells();
-    System.out.print(Arrays.toString(test.getLocationCells()));
+    testRun.setLocationCells();
+
+    while (testRun.getNumOfHits() < 3) {
+      String userGuess = System.console().readLine("Enter a number ");
+      System.out.println(testRun.checkYourSelf(userGuess));
+      if (testRun.checkYourSelf(userGuess) == "kill") {
+        System.out.println("You took " + numberOfGuess + " guess");
+      }
+    }
   }
 }
