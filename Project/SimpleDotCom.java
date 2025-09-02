@@ -22,7 +22,6 @@ class SimpleDotComTestDrive {
 
     String userGuess = "2";
     String testResult = "Failed";
-    String result = dot.checkYourSelf(userGuess);
 
     if (dot.checkYourSelf(userGuess).equals("hit")) {
       testResult = "Passed";
