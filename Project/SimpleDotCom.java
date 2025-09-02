@@ -8,16 +8,25 @@ public class SimpleDotCom {
 
   }
 
-  // Pick randomNum between 0 and 4
-  // For each index in locationCells (size 3):
-  // store randomNum + index
-  // Result: locationCells contains 3 consecutive numbers
-  void setLocationCells() {
+  void setLocationCells(int[] locations) {
+
   }
 }
 
 class SimpleDotComTestDrive {
   public static void main(String[] args) {
+    SimpleDotCom dot = new SimpleDotCom();
 
+    int[] locations = { 2, 3, 4 };
+    dot.setLocationCells(locations);
+
+    String userGuess = "2";
+    String testResult = "failed";
+
+    if (dot.checkYourSelf(userGuess).equals("hit")) {
+      testResult = "Passed";
+    }
+
+    System.out.println(testResult);
   }
 }
