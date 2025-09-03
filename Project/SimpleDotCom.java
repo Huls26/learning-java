@@ -1,7 +1,7 @@
 package Project;
 
 public class SimpleDotCom {
-  private int[] locationCells = { 2, 3, 4 };
+  private int[] locationCells;
   private int numOfHits = 0;
 
   String checkYourSelf(String userGuess) {
