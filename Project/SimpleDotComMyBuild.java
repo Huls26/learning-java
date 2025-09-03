@@ -14,6 +14,7 @@ public class SimpleDotComMyBuild {
     int integerGuess = Integer.parseInt(userGuess);
     int x = 0;
 
+    // should use for loop and locationCells.length instead of 3;
     while (x < 3) {
       int currentValue = locationCells[x];
 
