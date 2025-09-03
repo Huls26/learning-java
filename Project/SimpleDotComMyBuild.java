@@ -8,6 +8,8 @@ public class SimpleDotComMyBuild {
     return numOfHits;
   }
 
+  // I likee this method
+  // You wrote this, by the way.
   String checkYourSelf(String userGuess) {
     int integerGuess = Integer.parseInt(userGuess);
     int x = 0;
