@@ -1,11 +1,22 @@
 package Project;
 
 public class SimpleDotCom {
-  private int[] locationCells;
+  private int[] locationCells = { 2, 3, 4 };
   private int numOfHits = 0;
 
   String checkYourSelf(String userGuess) {
+    int userGuessInt = Integer.parseInt(userGuess);
+    int hitsEnd = 3;
 
+    for (int cell : locationCells) {
+      if (cell == userGuessInt) {
+        numOfHits++;
+
+        return numOfHits == hitsEnd ? "kill" : "hit";
+      }
+    }
+
+    return "miss";
   }
 
   void setLocationCells(int[] locations) {
@@ -21,16 +32,17 @@ class SimpleDotComTestDrive {
     dot.setLocationCells(locations);
 
     String userGuess = "2";
-    String testResult = "Failed";
 
     if (dot.checkYourSelf(userGuess).equals("hit")) {
-      testResult = "Passed";
+      System.out.println("Passed");
+    } else {
+      System.out.println("Failed");
     }
 
     if (dot.checkYourSelf("1").equals("miss")) {
-      testResult = "Passed";
+      System.out.println("Passed");
+    } else {
+      System.out.println("Failed");
     }
-
-    System.out.println(testResult);
   }
 }
