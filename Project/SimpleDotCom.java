@@ -20,7 +20,7 @@ public class SimpleDotCom {
   }
 
   void setLocationCells(int[] locations) {
-
+    locationCells = locations;
   }
 }
 
