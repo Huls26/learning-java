@@ -36,6 +36,7 @@ class DotComTestDrive {
     d.setLocationCells(locationList);
     String d1 = d.checkYourSelf("1");
     String d2 = d.checkYourSelf("2");
+    String d3 = d.checkYourSelf("4");
 
     if (d1.equals("hit")) {
       System.out.println("passed");
@@ -44,6 +45,12 @@ class DotComTestDrive {
     }
 
     if (d2.equals("hit")) {
+      System.out.println("passed");
+    } else {
+      System.out.println("failed");
+    }
+
+    if (d3.equals("miss")) {
       System.out.println("passed");
     } else {
       System.out.println("failed");
