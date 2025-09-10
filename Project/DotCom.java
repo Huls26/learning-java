@@ -34,5 +34,19 @@ class DotComTestDrive {
     locationList.add("3");
 
     d.setLocationCells(locationList);
+    String d1 = d.checkYourSelf("1");
+    String d2 = d.checkYourSelf("2");
+
+    if (d1.equals("hit")) {
+      System.out.println("passed");
+    } else {
+      System.out.println("failed");
+    }
+
+    if (d2.equals("hit")) {
+      System.out.println("passed");
+    } else {
+      System.out.println("failed");
+    }
   }
 }
