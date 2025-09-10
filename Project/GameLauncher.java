@@ -17,9 +17,26 @@ public class GameLauncher {
     int numberOfGuess = 0;
     int[] consecutiveNum = new int[3];
     int randomNum = (int) (Math.random() * 5);
+    boolean gameEnds = false;
 
     for (int x = 0; x < 3; x++) {
       consecutiveNum[x] = randomNum + x;
+    }
+
+    SimpleDotCom game = new SimpleDotCom();
+    game.setLocationCells(consecutiveNum);
+
+    while (!gameEnds) {
+      String userGuess = System.console().readLine("Enter a number ");
+      String guessResult = game.checkYourSelf(userGuess);
+
+      numberOfGuess++;
+      System.out.println(guessResult);
+
+      if (guessResult.equals("kill")) {
+        gameEnds = true;
+        System.out.println("You took " + numberOfGuess + " guesses");
+      }
     }
   }
 }
