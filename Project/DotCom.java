@@ -37,7 +37,8 @@ class DotComTestDrive {
     String d1 = d.checkYourSelf("1");
     String d2 = d.checkYourSelf("2");
     String d3 = d.checkYourSelf("4");
-    String d4 = d.checkYourSelf("3");
+    String d4 = d.checkYourSelf("1");
+    String d5 = d.checkYourSelf("3");
 
     if (d1.equals("hit")) {
       System.out.println("passed");
@@ -57,7 +58,13 @@ class DotComTestDrive {
       System.out.println("failed");
     }
 
-    if (d4.equals("kill")) {
+    if (d4.equals("miss")) {
+      System.out.println("passed");
+    } else {
+      System.out.println("failed");
+    }
+
+    if (d5.equals("kill")) {
       System.out.println("passed");
     } else {
       System.out.println("failed");
