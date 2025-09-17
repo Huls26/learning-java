@@ -14,9 +14,13 @@ public class DotComBust {
       DotCom newDotCom = new DotCom();
       newDotCom.setName(name);
       dotComList.add(newDotCom);
-    }
 
-    dotComList.forEach(dot -> System.out.println(dot.getName()));
+      ArrayList<String> randomLocation = helper.placeDotCom(3);
+      newDotCom.setLocationCells(randomLocation);
+
+      ArrayList<String> locationCells = newDotCom.getLocationCells();
+      System.out.println(locationCells);
+    }
   }
 
   void startPlaying() {
