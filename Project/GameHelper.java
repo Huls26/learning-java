@@ -66,7 +66,7 @@ public class GameHelper {
     int x = 0;
     int row = 0;
     int column = 0;
-    // System.out.println(“\n”);
+    // System.out.println("\n");
 
     while (x < comSize) {
       grid[coords[x]] = 1;
@@ -76,9 +76,9 @@ public class GameHelper {
 
       alphaCells.add(temp.concat(Integer.toString(row)));
       x++;
-      // System.out.print(“ coord “+x+” = “ + alphaCells.get(x-1));
+      // System.out.print(" coord "+x+" = " + alphaCells.get(x-1));
     }
-    // System.out.println(“\n”);
+    // System.out.println("\n");
     return alphaCells;
   }
 }
