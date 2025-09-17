@@ -8,7 +8,13 @@ public class DotComBust {
   int numOfGuesses = 0;
 
   void setUpGame() {
-    DotCom dotCom = new DotCom();
+    DotCom dotCom1 = new DotCom();
+    DotCom dotCom2 = new DotCom();
+    DotCom dotCom3 = new DotCom();
+
+    dotCom1.setName("Pet.com");
+    dotCom2.setName("Store.com");
+    dotCom3.setName("Boat.com");
 
   }
 
@@ -26,8 +32,8 @@ public class DotComBust {
 
   public static void main(String[] args) {
     DotComBust game = new DotComBust();
-    String p = game.helper.getUserInput("Enter a guess: ");
-
-    System.out.println(p);
+    ArrayList<String> o = game.helper.placeDotCom(2);
+    System.out.println(o);
+    game.setUpGame();
   }
 }
