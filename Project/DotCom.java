@@ -18,6 +18,10 @@ public class DotCom {
     locationCells = locations;
   }
 
+  public ArrayList<String> getLocationCells() {
+    return locationCells;
+  }
+
   public String checkYourSelf(String userGuess) {
     int idx = locationCells.indexOf(userGuess);
 
