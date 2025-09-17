@@ -4,8 +4,15 @@ import java.util.ArrayList;
 
 public class DotCom {
   private ArrayList<String> locationCells;
+  private String name;
 
-  // private numOfHits = 0;
+  public void setName(String n) {
+    name = n;
+  }
+
+  public String getName() {
+    return name;
+  }
 
   public void setLocationCells(ArrayList<String> locations) {
     locationCells = locations;
