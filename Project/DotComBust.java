@@ -27,8 +27,25 @@ public class DotComBust {
 
   }
 
-  void checkUserGuess() {
+  void checkUserGuess(String userGuess) {
+    numOfGuesses++;
+    String result = "miss";
 
+    for (DotCom dotCom : dotComList) {
+      String dotComCheck = dotCom.checkYourSelf(userGuess);
+      if (dotComCheck.equals("hit")) {
+        // int idxCell = dotCom.getLocationCells().indexOf(userGuess);
+        dotCom.getLocationCells().remove(userGuess);
+        result = "hit";
+        break;
+      } else if (dotComCheck.equals("kill")) {
+        dotComList.remove(dotCom);
+        result = "kill";
+        break;
+      }
+    }
+
+    System.out.println(result);
   }
 
   void finishGame() {
@@ -38,5 +55,8 @@ public class DotComBust {
   public static void main(String[] args) {
     DotComBust game = new DotComBust();
     game.setUpGame();
+    game.checkUserGuess("a1");
+    game.checkUserGuess("b3");
+    game.checkUserGuess("c2");
   }
 }
