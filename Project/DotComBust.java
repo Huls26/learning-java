@@ -25,7 +25,7 @@ public class DotComBust {
 
   void startPlaying() {
     while (!dotComList.isEmpty()) {
-      String userGuess = helper.getUserInput("Enter user's guess");
+      String userGuess = helper.getUserInput("Enter user's guess: ");
       checkUserGuess(userGuess);
 
       for (DotCom d : dotComList) {
@@ -56,12 +56,20 @@ public class DotComBust {
   }
 
   void finishGame() {
+    System.out.println("Game over");
 
+    if (numOfGuesses <= 18) {
+      System.out.println("Congrats, it only took you " + numOfGuesses + " guesses.");
+      System.out.println("You sank all the ships.");
+    } else {
+      System.out.println("You finished the game, but I'm not impressed that you took " + numOfGuesses + " guesses.");
+    }
   }
 
   public static void main(String[] args) {
     DotComBust game = new DotComBust();
     game.setUpGame();
     game.startPlaying();
+    game.finishGame();
   }
 }
