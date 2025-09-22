@@ -24,7 +24,14 @@ public class DotComBust {
   }
 
   void startPlaying() {
+    while (!dotComList.isEmpty()) {
+      String userGuess = helper.getUserInput("Enter user's guess");
+      checkUserGuess(userGuess);
 
+      for (DotCom d : dotComList) {
+        System.out.println(d.getLocationCells());
+      }
+    }
   }
 
   void checkUserGuess(String userGuess) {
@@ -55,8 +62,6 @@ public class DotComBust {
   public static void main(String[] args) {
     DotComBust game = new DotComBust();
     game.setUpGame();
-    game.checkUserGuess("a1");
-    game.checkUserGuess("b3");
-    game.checkUserGuess("c2");
+    game.startPlaying();
   }
 }
